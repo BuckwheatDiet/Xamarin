@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TestApp1" x:Class="TestApp1.MainPage">
+    <StackLayout>
+        <!-- Place new controls here -->
+        <ListView x:Name="lst" HasUnevenRows="True">  
+            <ListView.ItemTemplate>  
+                <DataTemplate>  
+                    <ViewCell>  
+                        <StackLayout Orientation="Horizontal">  
+                            <Image Source="{Binding imgsource}" HeightRequest="30" WidthRequest="50" HorizontalOptions="Start"></Image>  
+                            <StackLayout Orientation="Vertical">  
+                                <Label Text="{Binding Name}" Font="18"></Label>  
+                                <Label Text="{Binding Num}" TextColor="Gray"></Label> </StackLayout>  
+                        </StackLayout>  
+                    </ViewCell>  
+                </DataTemplate>  
+            </ListView.ItemTemplate>  
+        </ListView> 
+        <!--
+        <ListView x:Name="lst">  
+            <ListView.ItemTemplate>  
+                <DataTemplate>  
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Num}" ImageSource="{Binding imgsource}"></ImageCell>  
+                </DataTemplate>  
+            </ListView.ItemTemplate>  
+        </ListView>
+        -->
+    </StackLayout>
+</ContentPage>
